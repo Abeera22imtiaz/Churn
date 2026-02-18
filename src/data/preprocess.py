@@ -22,6 +22,8 @@ def preprocess_data(df: pd.DataFrame, target_col: str = "Churn") -> pd.DataFrame
     if target_col in df.columns and df[target_col].dtype == "object":
         df[target_col] = df[target_col].str.strip().map({"No": 0, "Yes": 1})
 
+
+
     # TotalCharges often has blanks in this dataset -> coerce to float
     if "TotalCharges" in df.columns:
         df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors="coerce")

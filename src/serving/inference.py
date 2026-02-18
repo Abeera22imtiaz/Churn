@@ -32,7 +32,9 @@ import mlflow
 # IMPORTANT: This path is set during Docker container build
 # In development: uses local MLflow artifacts
 # In production: uses model copied to container at build time
-MODEL_DIR = "/app/model"
+MODEL_DIR = r"E:/python/Telco-Customer-Churn-ML/src/serving/model/3b1a41221fc44548aed629fa42b762e0/artifacts/model"
+
+
 
 try:
     # Load the trained XGBoost model in MLflow pyfunc format

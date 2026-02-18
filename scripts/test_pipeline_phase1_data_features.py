@@ -4,14 +4,14 @@ import pandas as pd
 
 # Make sure Python can find your src package
 import sys
-sys.path.append(os.path.abspath("src"))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
 
 from data.load_data import load_data
 from data.preprocess import preprocess_data
 from features.build_features import build_features
 
 # === CONFIG ===
-DATA_PATH = "/Users/riadanas/Desktop/Telco Customer Churn MLE/data/raw/Telco-Customer-Churn.csv"  # adjust to your file path
+DATA_PATH = r"E:/python/Telco-Customer-Churn-ML/src/data/raw/Telco-Customer-Churn.csv"  # adjust to your file path
 TARGET_COL = "Churn"
 
 def main():
